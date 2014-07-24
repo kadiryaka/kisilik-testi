@@ -1,0 +1,32 @@
+<center>
+    <h1>Kişilik Profili</h1>
+    <hr>
+    <h2>Bölüm#<%= profileQuestions[0].get("bolum") %></h2>
+    <br>
+    <table>
+    <%
+        var i = 1;
+        _.each(profileQuestions, function(profileQuestion){
+        if(i%4==1) {
+        %>
+        <tr>
+        <td><b><%= profileQuestion.get('soru_no') %></b></td>
+        <%
+        }
+    %>
+
+        <td><input type="radio" id="<%= profileQuestion.get('soru_no') %>" name="<%= profileQuestion.get('soru_no') %>" value="<%= profileQuestion.get('id') %>"></td><td><%= profileQuestion.get('secenek') %></td>
+    <%
+        if(i%4==0) {
+        %>
+        </tr>
+        <%
+        }
+        i++;
+        });
+    %>
+    </table>
+    <br>
+    <button type="button" id="bitir">bitir</button>
+    <input type="hidden" id="id" name="id" value="<%= profileQuestions[0].get("bolum") %>">
+</center>

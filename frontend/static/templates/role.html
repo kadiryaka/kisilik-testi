@@ -1,0 +1,19 @@
+<center>
+    <h1>Rol Anketi</h1>
+    <hr>
+    <h2><%= roleQuestions[0].get("soru") %></h2>
+    <br>
+    <table>
+    <%
+        var i = 1;
+        _.each(roleQuestions, function(roleQuestion){
+    %>
+        <tr><td><%= roleQuestion.get('secenek') %></td><td><input type="text" id="i<%= i %>" size="3" value="0"/></td></tr>
+    <%
+        i++;
+        });
+    %>
+    </table>
+    <button type="button" id="tamam">tamam</button>
+    <input type="hidden" id="id" name="id" value="<%= roleQuestions[0].get("soru_id") %>">
+</center>

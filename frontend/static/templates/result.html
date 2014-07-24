@@ -1,0 +1,63 @@
+<center>
+    <h1>Sonuç</h1>
+    <hr>
+    <h2>#<%= results[0]["adi"] %> <%= results[0]["soyadi"] %></h2>
+    <hr>
+    <table>
+        <%
+
+        for (var k in results[1]){
+            if (results[1].hasOwnProperty(k)) {
+                %>
+                    <tr><td><%= k %></td><td><%= results[1][k] %></td></tr>
+                <%
+            }
+        }
+
+        %>
+    </table>
+    <hr>
+    <table>
+        <%
+
+        for (var k in results[2]){
+        if (results[2].hasOwnProperty(k)) {
+        %>
+        <tr><td><%= k %></td><td><%= results[2][k] %></td></tr>
+        <%
+        }
+        }
+
+        %>
+    </table>
+    <hr>
+    <table>
+        <%
+
+        for (var k in results[3]){
+        if (results[3].hasOwnProperty(k)) {
+        %>
+        <tr><td><%= k %></td><td><%= results[3][k] %></td></tr>
+        <%
+        }
+        }
+
+        %>
+    </table>
+    <hr>
+    <table>
+        <%
+
+        for (var k in results[4]){
+        if (results[4].hasOwnProperty(k)) {
+        %>
+        <tr><td><%= k %></td><td><%= results[4][k] %></td></tr>
+        <%
+        }
+        }
+
+        %>
+    </table>
+    <hr>
+    <button type="button" id="bye">bye</button>
+</center>
